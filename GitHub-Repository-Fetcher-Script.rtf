@@ -1,41 +1,34 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+ # Set environment variables for GitHub API token, results per page, and base URL
+TOKEN="token"
+PERPAGE=100
+BASEURL="https://api.github.com/repositories"
 
-\f0\fs24 \cf0 # Set environment variables for GitHub API token, results per page, and base URL\
-TOKEN="token"\
-PERPAGE=100\
-BASEURL="https://api.github.com/repositories"\
-\
-# Initialize variables to track page number and number of pages searched\
-i=1\
-pages_searched=0\
-\
-# Print a message to show that the search is starting\
-echo "Searching for repositories..."\
-\
-# Loop through pages of repositories until no more pages are found\
-while true\
-do\
-  # Use curl to fetch the current page of repositories from the GitHub API\
-  result=$(curl -s -H "Authorization: token $TOKEN" -H 'Accept: application/vnd.github.v3+json' "$\{BASEURL\}?per_page=$\{PERPAGE\}&page=$\{i\}" 2>&1)\
-\
-  # Extract and print the full names of the repositories on the current page\
-  echo "$result" | jq '.[].full_name'\
-\
-  # Increment the page number and number of pages searched\
-  ((pages_searched=$pages_searched+1))\
-\
-  # Check if there are any more pages of repositories\
-  if ! echo "$result" | jq '.[]' > /dev/null 2>&1; then\
-    # If no more pages are found, print a message and break out of the loop\
-    echo "No more repositories found."\
-    break\
-  fi\
-\
-  # Increment the page number for the next iteration\
-  ((i=$i+1))\
-done 2>&1 | tee listofgithubrepos.txt}
+# Initialize variables to track page number and number of pages searched
+i=1
+pages_searched=0
+
+# Print a message to show that the search is starting
+echo "Searching for repositories..."
+
+# Loop through pages of repositories until no more pages are found
+while true
+do
+  # Use curl to fetch the current page of repositories from the GitHub API
+  result=$(curl -s -H "Authorization: token $TOKEN" -H 'Accept: application/vnd.github.v3+json' "$\{BASEURL\}?per_page=$\{PERPAGE\}&page=$\{i\}" 2>&1)
+
+  # Extract and print the full names of the repositories on the current page
+  echo "$result" | jq '.[].full_name'
+
+  # Increment the page number and number of pages searched
+  ((pages_searched=$pages_searched+1))
+
+  # Check if there are any more pages of repositories
+  if ! echo "$result" | jq '.[]' > /dev/null 2>&1; then
+    # If no more pages are found, print a message and break out of the loop
+    echo "No more repositories found."
+    break
+  fi
+
+  # Increment the page number for the next iteration
+  ((i=$i+1))
+done 2>&1 | tee listofgithubrepos.txt
