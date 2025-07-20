@@ -1,43 +1,15 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Oblique;\f1\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
-{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
-{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-
-\f0\i\fs24 \cf0 GitHub Repository Fetcher Script
-\f1\i0 \
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}This script fetches a list of GitHub repositories using the GitHub API and saves the full names of the repositories to a text file.\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-Description\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}This script uses the GitHub API to retrieve a list of repositories, paginating through the results until no more pages are found. \
-{\listtext	\uc0\u8226 	}The script extracts the full names of the repositories and prints them to the console, and \
-{\listtext	\uc0\u8226 	}This script also saves the output to a file named listofgithubrepos.txt in the current directory.\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-Key Features\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls3\ilvl0\cf0 {\listtext	\uc0\u8226 	}Fetches repositories from the GitHub API using a specified token for authentication.\
-{\listtext	\uc0\u8226 	}Paginates through results, fetching 100 repositories per page (configurable).\
-{\listtext	\uc0\u8226 	}Extracts and prints the full names of the repositories on the console.\
-{\listtext	\uc0\u8226 	}Saves the output to a text file named listofgithubrepos.txt\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-Usage\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls4\ilvl0\cf0 {\listtext	\uc0\u8226 	}This script can be used to gather a list of GitHub repositories for analysis, research, or other similar purposes. \
-{\listtext	\uc0\u8226 	}Simply replace the TOKEN variable with a valid GitHub API token and run the script. \
-{\listtext	\uc0\u8226 	}The output will be saved to a file named listofgithubrepos.txt in the current working directory.\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-
-\f0\i Ai assistance (code and documentation): Meta AI\
-}
+#GitHub Repository Fetcher Script
+*This script fetches a list of GitHub repositories using the GitHub API and saves the full names of the repositories to a text file.
+##Description
+Author: Anupa Sharma
+#Key Features
+*Fetches repositories from the GitHub API using a specified token for authentication.
+*Paginates through results, fetching 100 repositories per page (configurable).
+*Extracts and prints the full names of the repositories on the console.
+*Saves the output to a text file named listofgithubrepos.txt
+##Usage
+*This script can be used to gather a list of GitHub repositories for analysis, research, or other similar purposes.
+*Simply replace the TOKEN variable with a valid GitHub API token and run the script.
+*The output will be saved to a file named listofgithubrepos.txt in the current working directory.
+##AI Assistance
+*Code and documentation: Meta AI
